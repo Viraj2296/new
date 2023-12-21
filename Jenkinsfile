@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+        pullscm '*/5 * * * *'
+    }
     stages {
         stage('Build') {
             steps {
